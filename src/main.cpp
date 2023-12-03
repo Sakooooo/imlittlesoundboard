@@ -1,7 +1,7 @@
 #include <iostream>
 #include <imgui.h>
-#include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
+#include <imgui_impl_glfw.h>
 #include <GL/GL.h>
 #include <GLFW/glfw3.h>
 
@@ -21,6 +21,7 @@ int main() {
   ImGui::CreateContext();
   ImGuiIO& io = ImGui::GetIO(); (void)io;
   ImGui::StyleColorsDark();
+  ImGui_ImplGlfw_InitForOpenGL(window, true);
 
   while (!glfwWindowShouldClose(window))
     {
@@ -31,8 +32,8 @@ int main() {
       // do stuff here
 
       // setup imgui frame
-      ImGui_ImplOpenGL3_NewFrame();
       ImGui_ImplGlfw_NewFrame();
+      ImGui_ImplOpenGL3_NewFrame();
       ImGui::NewFrame();
 
       // begin imgui thing
