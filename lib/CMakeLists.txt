@@ -6,3 +6,7 @@ add_library(lib INTERFACE)
 # glfw
 add_subdirectory(glfw/)
 target_link_libraries(lib INTERFACE glfw)
+
+# opengl
+find_package(OpenGL REQUIRED)
+target_link_libraries(lib INTERFACE OpenGL::GL)
