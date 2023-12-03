@@ -1,7 +1,7 @@
 * TODO Fix Undefined References 
 relevant compiler errors
-#+begin_compiler_errors
+#+begin_src
 C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\imlittlesoundboard.dir/objects.a(main.cpp.obj):main.cpp:(.text+0xf3): undefined reference to `ImGui_ImplOpenGL3_NewFrame()'
 
 C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\imlittlesoundboard.dir/objects.a(main.cpp.obj):main.cpp:(.text+0x138): undefined reference to `ImGui_ImplOpenGL3_RenderDrawData(ImDrawData*)'
-#+end_compiler_errors
+#+end_src
