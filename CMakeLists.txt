@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.26.3)
 project(imlittlesoundboard)
 
 # set to /build/lib and /build/bin
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # man
@@ -13,6 +13,9 @@ if (WIN32)
 else()
   message("using default Module path")
 endif()
+
+# clangd
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
 add_subdirectory(lib/)
